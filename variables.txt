@@ -1,0 +1,7 @@
+NUMERICOS-ENTEROS-CON SIGNO
+
+C#             RANGO            BITS           .NET               VALOR INICIAL
+sbyte         -128/127           8          System.Sbyte				0
+short       -32768/32767		16			System.Int16				0
+int			-2,14M/2,14M		32			System.Int32				0
+long			RESTO			64			System.Int64				0
