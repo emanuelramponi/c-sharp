@@ -5,3 +5,96 @@ sbyte         -128/127           8          System.Sbyte				0
 short       -32768/32767		16			System.Int16				0
 int			-2,14M/2,14M		32			System.Int32				0
 long			RESTO			64			System.Int64				0
+
+
+NUMERICOS-ENTEROS-SIN SIGNO
+
+C#             RANGO            BITS           .NET               VALOR INICIAL
+byte		   0/255			8           System.Sbyte				0
+ushort        0/65535			16			System.Int16				0
+uint		  0/4,29M			32			System.Int32				0
+ulong		   RESTO			64			System.Int64				0
+
+
+NUMERICOS-NO ENTEROS
+
+C#             DIGITOS           .NET                 VALOR INICIAL
+float			  7				System.Single				0.0f
+double  		15-16			System.Double				0.0d
+decimal			28-29			System.Decimal				0m
+
+SIMPLES-NO NUMERICOS
+
+C#             RANGO           Valores             .NET               VALOR INICIAL
+char		U+0000 a U-FFFF		16 bits         System.Char					0
+bool          Booleano			true,false		System.Boolean				0
+
+
+https://en.wikipedia.org/wiki/List_of_Unicode_characters
+
+CONVERSIONES IMPLICITAS
+CHAR -> INT -> LONG -> FLOAT -> DOUBLE
+Se pueden hacer de manera automatica en este orden, de menor a mayor, de lo contrario es de manera explicita
+https://docs.microsoft.com/es-es/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions
+
+CONVERSIONES EXPLICTIA
+DOUBLE -> FLOAT -> LONG -> INT -> CHAR
+Se da cuando la conversion es de mayor a menor
+ejemplo:
+double myDouble = 9.78;
+int myInt = (int) myDouble;
+https://docs.microsoft.com/es-es/dotnet/csharp/language-reference/language-specification/conversions#explicit-conversions
+
+Conver.ToBoolean(<valor>)
+Conver.ToDouble(<valor>)
+Conver.ToString(<valor>)
+Conver.ToInt32(<valor>) = a valores enteros (int)
+Conver.ToInt64(<valor>) = a valores entero (long)
+
+
+OPERADORES ARITMETICOS UNARIOS
+
+INCREMENTO ++
+
+POSTFIJO (x++) 
+static void Main()
+{
+   int i = 2;
+   Console.WriteLine(i);
+   Console.WriteLine($"Postfijo (i++): {i++}");
+   Console.WriteLine($"Final despues de (i++): {i}");
+}
+CONSOLA:
+2
+Postfijo (i++): 2
+Final despues de (i++): 3
+
+
+PREFIJO (++x)
+static void Main()
+{
+   int i = 2;
+   Console.WriteLine(i);
+   Console.WriteLine($"Prefijo (++i): {++i}");
+   Console.WriteLine($"Final despues de (++i): {i}");
+}
+CONSOLA:
+2
+Postfijo (++i): 3
+Final despues de (++i): 3
+
++ VALOR EXISTENTE
+- NEGACION DEL VALOR EXISTENTE
+static void Main()
+{
+   int i = -4;
+   Console.WriteLine(i);
+   Console.WriteLine($"Con + por delante : {+i} (+(-4))");
+   Console.WriteLine($"Con - por delante : {-i} (-(-4))");
+}
+CONSOLA:
+-4
+Postfijo (++i): 3
+Final despues de (++i): 3
+Con + por delante : -4 (+(-4))
+Con - por delante : 4 (-(-4))

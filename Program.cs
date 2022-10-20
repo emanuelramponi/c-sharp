@@ -6,34 +6,41 @@
         {
             Console.WriteLine("Hello, World!");
 
-            Test.Mensaje();
-            Ejercicio.Ex1();
+            Test test = new Test();
+            test.Mensaje();
+            Ejercicio ejercicio = new Ejercicio();
+            ejercicio.Ex1();
+
+
 
         }
     }
 
     public class Test
     {
-        public static void Mensaje()
+        public  void Mensaje()
         {
             Console.WriteLine("Este es un mensaje");
             Console.WriteLine("Este es otro mensaje");
         }
-                
+
+
     }
 
     public class Ejercicio
     {
-        public static void Ex1()
+        public void Ex1()
         {
+            int edad;
+            string nombre, apellido, aficion;
             Console.Write("Nombre: ");
-            string nombre = Console.ReadLine();
+            nombre = Console.ReadLine();
             Console.Write("Apellido: ");
-            string apellido = Console.ReadLine();
+            apellido = Console.ReadLine();
             Console.Write("Edad: ");
-            string edad = Console.ReadLine();
+            edad = Int32.Parse(Console.ReadLine());
             Console.Write("Aficion: ");
-            string aficion = Console.ReadLine();
+            aficion = Console.ReadLine();
 
             Console.WriteLine("============= INFORMACION BASICA =============");
             Console.WriteLine($"Eres {nombre} {apellido}");
