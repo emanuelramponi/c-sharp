@@ -98,3 +98,15 @@ Postfijo (++i): 3
 Final despues de (++i): 3
 Con + por delante : -4 (+(-4))
 Con - por delante : 4 (-(-4))
+
+\n Nueva linea
+\t Tabulador
+\\ Contrabarra
+\"" Comillas dobles
+\' Comillas simples
+\r Retorno de carro
+
+StartsWith(): Comprueba si nuestro string comienza con una secuencia de caracteres
+EndsWith(): Comprueba si nuestro string termina con una secuencia de caracteres\
+Equals(): Comprueba si nuestro string es igual (al 100%) al especificado
+EL RESULTADO DE ESTAS OPERACIONES SERA TRUE O FALSE
